@@ -35,8 +35,6 @@ def get_item(request, item_id):
 @api_view(['POST'])
 def add_item(request):
 
-    data = request.data
-
     serializer = ItemSerializer(data=request.data)
 
     if serializer.is_valid():
